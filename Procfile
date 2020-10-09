@@ -1,1 +1,1 @@
-web: gunicorn flaskr:app
+web: gunicorn run:my_awesome_app
