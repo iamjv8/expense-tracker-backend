@@ -2,15 +2,9 @@ from app import db, app, jsonify
 from flask import Blueprint
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import jwt_required
+from app.models.user import User
 
 user_blueprint = Blueprint('user', __name__, url_prefix='/user')
-
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False)
-    mobile = db.Column(db.Integer, nullable=False)
-    email = db.Column(db.String(50), nullable=False, unique=True)
-    password = db.Column(db.String(50), nullable=False)
 
 @user_blueprint.route('/', methods=['GET'])
 def get_all_users():

@@ -17,8 +17,8 @@ db = SQLAlchemy(app)
 jwt = JWTManager(app)
 
 #register Blueprints
-from . import user
+from .routes import user
 app.register_blueprint(user.user_blueprint)
 
-from . import auth
+from .routes import auth
 app.register_blueprint(auth.auth_blueprint)
