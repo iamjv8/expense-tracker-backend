@@ -7,6 +7,7 @@ from app.models.user import User
 user_blueprint = Blueprint('user', __name__, url_prefix='/user')
 
 @user_blueprint.route('/', methods=['GET'])
+@jwt_required
 def get_all_users():
     users = User.query.all()
     Output = []
@@ -26,7 +27,6 @@ def get_user(id):
     if not user:
         return jsonify({'message': 'No User Found'})
 
-    user_data = {}
     user_data = {}
     user_data['name'] = user.name
     user_data['mobile'] = user.mobile

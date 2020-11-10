@@ -22,3 +22,6 @@ app.register_blueprint(user.user_blueprint)
 
 from .routes import auth
 app.register_blueprint(auth.auth_blueprint)
+
+from .routes import group
+app.register_blueprint(group.group_blueprint)
