@@ -6,3 +6,4 @@ class User(db.Model):
     mobile = db.Column(db.Integer, nullable=False)
     email = db.Column(db.String(50), nullable=False, unique=True)
     password = db.Column(db.String(50), nullable=False)
+    expense = db.relationship('ExpenseSplit', lazy='joined')

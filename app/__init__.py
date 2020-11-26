@@ -25,3 +25,6 @@ app.register_blueprint(auth.auth_blueprint)
 
 from .routes import group
 app.register_blueprint(group.group_blueprint)
+
+from .routes import expense
+app.register_blueprint(expense.expense_blueprint)

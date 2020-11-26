@@ -6,6 +6,7 @@ class Group(db.Model):
     group_type = db.Column(db.String(50), nullable=False)
     icon = db.Column(db.String(50), nullable=False)
     group_members = db.relationship('GroupMembers', lazy='joined')
+    expense = db.relationship('Expense', lazy='joined')
 
 class GroupMembers(db.Model):
     id = db.Column(db.Integer, primary_key=True)
