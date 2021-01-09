@@ -50,3 +50,4 @@ def get__expense_details(id):
     if 'description' in expense_details:
         return jsonify(expense_details)
     return jsonify({'message': 'Expense details not found.'})
+    
