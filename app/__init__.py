@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'SECRET_KEY'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'jwt-secret-string'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/expense_tracker'
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://expense_tracker_fz65_user:RDmAYzTa05JEz38b2nLsRqwPVsqvl3uU@dpg-cmubl8mv3ddc738ghhng-a.oregon-postgres.render.com/expense_tracker_fz65"
 
 # initialize sql-alchemy
 db = SQLAlchemy(app)
